@@ -2,29 +2,28 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Morse Code</title>
 </head>
 
 <body>
-	<header></header>
+  <header>
+    <h1>Morse code Decypter and Encrypter</h1>
+  </header>
 
-	<main>
-		<form>
-			<input type="text" id="entered-text">
-			<button type="button" id="generate" onclick="convertText()">Translate to Morse</button>
-			<output type="text" id="translated">
-		</form>
-
-		<form>
-				<input type="text" id="entered-morse">
-				<button type="button" id="generate-text" onclick="convertMorse()">Translate to Text</button>
-				<output type="text" id="translated-morse">
-		</form>
-	</main>
-	<script src="main.js" type="text/javascript"></script>
+  <main>
+    <form>
+      <input type="text" id="entered-text">
+      <button type="button" id="generate-morse" onclick="convertText()">Translate to Morse</button>
+      <section type="text" id="translated-english"></section><br />
+      <input type="text" id="entered-morse">
+      <button type="button" id="generate-text" onclick="convertMorse()">Translate to Text</button>
+      <section type="text" id="translated-morse"></section>
+    </form>
+  </main>
+  <script src="main.js" type="text/javascript"></script>
 </body>
 
 </html>
