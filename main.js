@@ -31,14 +31,3 @@ const convertMorse = message => {
   });
 
 };
-
-
-
-
-// let morseCode = enteredMorse.value;
-// morseCode = morseCode.split("");
-// for (index = 0; index < morseCode.length; index++) {
-//   morseCode[index] = morseAlphabet[morseCode[index]]
-// };
-// morseCode.join(" ")
-// translatedMorse.innerHTML = morseCode;
