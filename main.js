@@ -1,9 +1,9 @@
-const morseAlphabet = { a: '.-', b: '-..', c: '-.- .', d: '-..', e: '.', f: '..- .', g: '--.', h: '....', i: '..', j: '.---', k: '-.-', l: '.-..', m: '--', n: '-.', o: '---', p: '.--.', q: '--.-', r: '.-.', s: '...', t: '-', u: '..-', v: '...-', w: '.--', x: '-..-', y: '-.--', z: '--..', " ": "/" };
+const morseAlphabet = { a: '.-', b: '-...', c: '-.- .', d: '-..', e: '.', f: '..- .', g: '--.', h: '....', i: '..', j: '.---', k: '-.-', l: '.-..', m: '--', n: '-.', o: '---', p: '.--.', q: '--.-', r: '.-.', s: '...', t: '-', u: '..-', v: '...-', w: '.--', x: '-..-', y: '-.--', z: '--..', " ": "/" };
 
 const enteredText = document.getElementById('entered-text');
 const translatedText = document.getElementById('translated-english');
 
-function convertText() {
+convertText = () => {
   let makeLowerCase = enteredText.value;
   makeLowerCase = makeLowerCase.toLowerCase();
   makeLowerCase = makeLowerCase.split("");
@@ -17,12 +17,28 @@ function convertText() {
 const enteredMorse = document.getElementById('entered-morse');
 const translatedMorse = document.getElementById('translated-morse');
 
-function convertMorse() {
-  let morseCode = enteredMorse.value;
-  morseCode = morseCode.split("");
-  for (index = 0; index < morseCode.length; index++) {
-    morseCode[index] = morseAlphabet[morseCode[index]]
-  };
-  morseCode.join(" ")
-  translatedMorse.innerHTML = morseCode;
-}
+const convertMorse = message => {
+  let morseArray = []
+  let translated = ""
+  morseArray = enteredMorse.value.toLowerCase().split(" ")
+  morseArray.forEach((letter) => {
+    for (translation in morseAlphabet) {
+      if (letter === morseAlphabet[translation]) {
+        translated += translation
+      }
+    }
+    translatedMorse.innerHTML = translated
+  });
+
+};
+
+
+
+
+// let morseCode = enteredMorse.value;
+// morseCode = morseCode.split("");
+// for (index = 0; index < morseCode.length; index++) {
+//   morseCode[index] = morseAlphabet[morseCode[index]]
+// };
+// morseCode.join(" ")
+// translatedMorse.innerHTML = morseCode;
